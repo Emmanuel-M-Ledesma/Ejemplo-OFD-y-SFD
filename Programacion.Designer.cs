@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class Form1
+    partial class Programacion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,16 +30,19 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             this.btAbrir = new System.Windows.Forms.Button();
-            this.lblRuta = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btGuardar = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.txtText = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btborrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btAbrir
             // 
-            this.btAbrir.Location = new System.Drawing.Point(210, 38);
+            this.btAbrir.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btAbrir.Location = new System.Drawing.Point(250, 44);
             this.btAbrir.Name = "btAbrir";
             this.btAbrir.Size = new System.Drawing.Size(75, 23);
             this.btAbrir.TabIndex = 0;
@@ -47,22 +50,14 @@ namespace WindowsFormsApp2
             this.btAbrir.UseVisualStyleBackColor = true;
             this.btAbrir.Click += new System.EventHandler(this.btAbrir_Click);
             // 
-            // lblRuta
-            // 
-            this.lblRuta.AutoSize = true;
-            this.lblRuta.Location = new System.Drawing.Point(55, 81);
-            this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(86, 13);
-            this.lblRuta.TabIndex = 1;
-            this.lblRuta.Text = "Ruta del Archivo";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // btGuardar
             // 
-            this.btGuardar.Location = new System.Drawing.Point(57, 38);
+            this.btGuardar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btGuardar.Location = new System.Drawing.Point(250, 15);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(75, 23);
             this.btGuardar.TabIndex = 2;
@@ -72,22 +67,58 @@ namespace WindowsFormsApp2
             // 
             // txtText
             // 
-            this.txtText.Location = new System.Drawing.Point(57, 121);
+            this.txtText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtText.Location = new System.Drawing.Point(12, 61);
+            this.txtText.Multiline = true;
             this.txtText.Name = "txtText";
-            this.txtText.Size = new System.Drawing.Size(228, 20);
+            this.txtText.Size = new System.Drawing.Size(222, 154);
             this.txtText.TabIndex = 3;
             // 
-            // Form1
+            // txtDireccion
+            // 
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccion.Enabled = false;
+            this.txtDireccion.Location = new System.Drawing.Point(70, 17);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(164, 20);
+            this.txtDireccion.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Direccion";
+            // 
+            // btborrar
+            // 
+            this.btborrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btborrar.Location = new System.Drawing.Point(250, 74);
+            this.btborrar.Name = "btborrar";
+            this.btborrar.Size = new System.Drawing.Size(75, 23);
+            this.btborrar.TabIndex = 6;
+            this.btborrar.Text = "Borrar";
+            this.btborrar.UseVisualStyleBackColor = true;
+            this.btborrar.Click += new System.EventHandler(this.btborrar_Click);
+            // 
+            // Programacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 239);
+            this.ClientSize = new System.Drawing.Size(337, 239);
+            this.Controls.Add(this.btborrar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtText);
             this.Controls.Add(this.btGuardar);
-            this.Controls.Add(this.lblRuta);
             this.Controls.Add(this.btAbrir);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MinimumSize = new System.Drawing.Size(353, 278);
+            this.Name = "Programacion";
+            this.Text = "Programacion  2";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,11 +127,13 @@ namespace WindowsFormsApp2
         #endregion
 
         private System.Windows.Forms.Button btAbrir;
-        private System.Windows.Forms.Label lblRuta;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.TextBox txtText;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btborrar;
     }
 }
 
